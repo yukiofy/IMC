@@ -22,6 +22,7 @@ function meuEscopo(){
             return;
         }
 
+        
         const imc = getImc(peso, altura);
         const nivelImc = getNivelImc(imc)
         const msg = `Seu IMC é ${imc} (${nivelImc})`;
@@ -29,7 +30,7 @@ function meuEscopo(){
     })
 
     function getImc(peso, altura){
-        const imc = peso / altura ** 2;
+        const imc = peso / ((altura*0.01) ** 2);
         return imc.toFixed(2)
 
     }
